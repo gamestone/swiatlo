@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Światło</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <script src="swiatlo.js" type="text/javascript"></script>
+        <link href="swiatlo.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <body>
+
+        <script>
+
+            var s = navigator.userAgent.toLowerCase();
+            //s = "android";
+            document.body.mobile = s.indexOf("android") >= 0
+                    || s.indexOf("mobile") >= 0;
+            if (document.body.mobile)
+                document.body.setAttribute("mobile", "mobile");
+
+        </script>
+
+        <div id="menu" class="window">
+            <div class="window-header">Menu</div>
+            <div class="window-content"> 
+                <div>Lokalizacje</div>
+                <p id="nav-loc"></p>
+                <div onclick="location = '#pir'">Ośw. zewn.</div>
+                <div onclick="location = '#groups'">Grupy</div>
+                <p id="nav-groups"></p>
+                <div>Terminale</div>
+                <p id="nav-terms"></p>
+                <div onclick="location = '#misc'">Różne</div>
+            </div>
+        </div>
+
+        <!--        <div id="container" class="window">
+                    <div class="window-header">Grupy</div>
+        
+                    <div id="groups" class="window-content"> 
+        
+        
+                    </div>  
+        
+                </div>-->
+
+    </body>
+</html>

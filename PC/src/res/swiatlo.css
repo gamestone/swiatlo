@@ -1,0 +1,219 @@
+.rgb-bar {
+    width: 100%;
+    height: 30px;
+}
+
+*{
+    box-sizing: border-box;
+}
+body {
+    background-color: #eee;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 8px;
+    margin: 0;
+    font: 10pt Verdana, Tahoma, Arial;
+    -webkit-user-select: none;
+}
+
+
+
+#menu  {
+    margin-right: 8px;
+    width: auto;
+}
+
+body[mobile] #menu {
+    margin-right: 0;
+    width: 100%; 
+}
+#menu > * {
+    margin-right: 20px;
+}
+
+#menu .window-content p {
+    padding: 0;
+    margin: 0;
+}
+
+#menu .window-content div{
+    padding: 4px 8px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+body[mobile] #menu .window-content div {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+#menu .window-content div:hover {
+    background-color: #ddd;
+}
+
+#menu .window-content p div {
+    padding-left: 30px;
+}
+
+#menu .window-content{
+    padding: 4px;
+    white-space: nowrap;
+}
+
+.window {
+    width: 100%;
+    border: 1px solid #aaa;
+    /*margin: 4px;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.window-header {
+    background-color: #333;
+    color: #ddd;
+    margin: 0;
+    padding: 4px 20px;
+    width: 100%;
+}
+
+.window-content{                
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 10px;
+}
+
+.window-content > .window {
+    display: initial;
+}
+
+.t_bar {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0); 
+    width: 100%;
+    display: inline-block;
+}
+
+.t_bar[active]{
+    border: 1px solid #aaa;    
+}
+
+.t_bar span:nth-child(1){
+    display: inline-block;
+}
+
+.t_bar span:nth-child(2){
+    display: inline-block;
+    float: right;
+}
+
+
+
+body[mobile] {
+    font: 12pt Verdana, Tahoma, Arial;
+    padding: 0;
+    width: 100%;
+}
+
+
+body[mobile] #menu {
+    display: none;
+}
+
+body[mobile] .window {
+    border: none;
+}
+
+body[mobile] .window-header {
+    background-color: inherit;
+    color: #333;
+    padding: 10px;
+    border-bottom: 1px solid #bbb;
+}
+
+
+button {
+    margin: 4px;
+    padding: 4px 10px;
+    min-width: 50px;
+}
+
+
+input[type=range]{
+    -webkit-appearance: none;
+    background: none;
+    width: 100%;
+    height: 50px;
+    margin: -10px 0;
+}
+
+input[type=range][rgb]{
+    margin: 0;
+    background-image: url('hueBar.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.marker{
+    height: 4px;
+    margin-top: -17px;
+    padding: 0 6px;
+}
+
+.marker > div {
+    height: 100%;
+    width: 100%;
+    background-color: yellow;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    margin: 20px 4px;
+    border: 1px solid #aaa;
+}
+input[type=range][rgb]::-webkit-slider-runnable-track {
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -11px;
+    border: 1px solid #666;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    border: 1px solid #444;
+}
+
+td {
+    padding: 4px 20px;
+}
+
+
+body[mobile] td {
+    padding: 4px ;
+    font: 12pt Arial;
+}
+
+body[mobile] th {
+    font: 12pt Arial;
+}
+
+tr:nth-child(odd){
+    background-color: white;
+}
